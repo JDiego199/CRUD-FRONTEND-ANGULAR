@@ -10,15 +10,24 @@ import { ShowComponent } from './components/show/show.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 
+
 import {HttpClientModule }  from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
     CreateComponent,
     EditComponent,
+    LoginComponent,
+
+
 
   ],
+
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,8 +36,19 @@ import {HttpClientModule }  from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
 
+
   ],
+
+  exports:[
+    LoginComponent
+    ],
+
+
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

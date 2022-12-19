@@ -1,0 +1,83 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>Iniciar Sesión Admin Juanito</b></h4>
+            </div>
+            <!--   
+            <div class="col-sm-6">
+              <a href="#" routerLink="/show" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i>
+                &nbsp;Back</a>
+            </div
+            -->
+          </div>
+        </div>
+        <form #employeeForm="ngForm">
+          <div class="table-content">
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="usser" class="p-t-b-10">Usuario<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="usser" class="form-control" id="usser" required maxlength="255"
+                  [(ngModel)]="loginNueva.usuario" name="usser" #FirstName="ngModel">
+  
+              </div>
+            </div>
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="pass" class="p-t-b-10">Contraseña<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="pass" required maxlength="255"
+                  [(ngModel)]="loginNueva.pass" name="pass" #LastName="ngModel">
+    
+              </div>
+            </div>
+          </div>
+          <div class="table-footer">
+            <button class="btn btn-success" (click)="listarLogins()">Submit</button>
+          </div>
+        </form>
+      </div>
+
+
+
+<!--
+      <table class="table table-striped table-hover table-bordered table-content">
+        <thead>
+          <tr class="center-align">
+       
+            <th>Usuario</th>
+            <th>Contraseña</th>
+         
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Login of lista" class="center-align">
+            <td>{{ Login.usuario }}</td>
+            <td>{{ Login.pass }}</td>
+           
+    
+          </tr>
+          <tr>
+            <td *ngIf="lista.length == 0" colspan="6">No Employee Found</td>
+          </tr>
+        </tbody>
+      </table>
+
+-->
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+    

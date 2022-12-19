@@ -9,6 +9,10 @@ import { AhorrosService } from './services/ahorros/ahorros.service'
 })
 
 export class AppComponent implements OnInit {
+  
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 
   cuentaForm: FormGroup | null=null;
 
@@ -30,6 +34,9 @@ export class AppComponent implements OnInit {
 
     })
 
+
+      
+
   }
 /*
   guardar(): void {
@@ -39,4 +46,8 @@ export class AppComponent implements OnInit {
     error => {console.error(error)})
   }
 */
+
+
+
+
 }
