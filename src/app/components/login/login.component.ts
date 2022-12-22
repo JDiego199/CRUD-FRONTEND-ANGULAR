@@ -1,36 +1,38 @@
 import { Component,  OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AhorrosService } from 'src/app/services/ahorros/ahorros.service';
-import { Login,LoginService } from 'src/app/services/login/login.service';
+import { LoginService } from 'src/app/services/login/login.service';
+
 
 @Component({
-  selector: 'app-show',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
-  lista:any=[];
-  loginNueva : Login ={usuario:'',pass:''};
-  constructor(private loginService: LoginService,private router:Router) {}
+  usuario: string;
+  password: string;
 
-  ngOnInit(): void {
-  this.listarLogins();
-  }
+  constructor(private router:Router, public loginService: LoginService) {}
 
-  listarLogins()
-  {
-    this.loginService.getLogin().subscribe(
-      res=>{
-        this.lista=res;
-        console.log(res);
-      },
-      err=>console.log(err)
-      
-    );
-  }
+  login() {
 
+    const user =  this.usuario;
+    const pass = this.password;
+    this.loginService.login(user,pass).subscribe( data => {
+    
+      if(data)    
+      {     
+    
+        this.router.navigate(['/show']);    
+  
+      }    
+      else{    
+       // this.errorMessage = data.Message;    
+      }    
+      console.log(data);
+    });
 
-
-
+}
 }

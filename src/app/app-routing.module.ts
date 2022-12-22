@@ -12,7 +12,7 @@ import { ShowComponent } from './components/show/show.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', component: ShowComponent },
+  { path: '', component: LoginComponent },
   { path: 'show', component: ShowComponent },
   { path: 'create', component: CreateComponent },
   { path: 'edit/:id', component: EditComponent },

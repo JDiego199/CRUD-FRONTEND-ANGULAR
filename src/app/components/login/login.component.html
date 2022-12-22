@@ -22,7 +22,7 @@
               </div>
               <div class="col-sm-9">
                 <input type="usser" class="form-control" id="usser" required maxlength="255"
-                  [(ngModel)]="loginNueva.usuario" name="usser" #FirstName="ngModel">
+                  [(ngModel)]="usuario" name="usser" #FirstName="ngModel">
   
               </div>
             </div>
@@ -31,14 +31,14 @@
                 <label for="pass" class="p-t-b-10">Contraseña<span class="requiredStar">*</span></label>
               </div>
               <div class="col-sm-9">
-                <input type="text" class="form-control" id="pass" required maxlength="255"
-                  [(ngModel)]="loginNueva.pass" name="pass" #LastName="ngModel">
+                <input type="password" class="form-control" id="pass" required maxlength="255"
+                  [(ngModel)]="password" name="pass" #LastName="ngModel">
     
               </div>
             </div>
           </div>
           <div class="table-footer">
-            <button class="btn btn-success" (click)="listarLogins()"  routerLink="/show">Submit</button>
+            <button class="btn btn-success" type="submit" (click)="login()"  >Submit</button>
           </div>
         </form>
       </div>
