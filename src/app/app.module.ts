@@ -10,7 +10,7 @@ import { ShowComponent } from './components/show/show.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 
-
+import { CookieService } from 'ngx-cookie-service';
 import {HttpClientModule }  from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 
@@ -46,9 +46,10 @@ import { LoginComponent } from './components/login/login.component';
 
 
 
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
   
  }

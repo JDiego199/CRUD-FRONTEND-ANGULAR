@@ -30,6 +30,7 @@ export class ShowComponent implements OnInit {
 
   eliminar(id:string)
   {
+ 
     this.ahorrosService.deleteAhorros(id).subscribe(
       res=>{this.ngOnInit();},
       err=>console.log(err)

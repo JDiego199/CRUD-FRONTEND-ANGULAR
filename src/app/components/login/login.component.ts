@@ -19,8 +19,8 @@ export class LoginComponent  {
   login() {
 
     const user =  this.usuario;
-    const pass = this.password;
-    this.loginService.login(user,pass).subscribe( data => {
+    const password = this.password;
+    this.loginService.login(user,password).subscribe( data => {
     
       if(data)    
       {     
@@ -29,7 +29,8 @@ export class LoginComponent  {
   
       }    
       else{    
-       // this.errorMessage = data.Message;    
+       // this.errorMessage = data.Message;   
+       alert("password incorrect") ;
       }    
       console.log(data);
     });
